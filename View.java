@@ -4,13 +4,25 @@
  * and open the template in the editor.
  */
 package mazesolve;
-
+import javax.swing.JFrame;
 /**
  *
  * @author Vicky
  */
-public class View {
-
+public class View extends JFrame{
+private int[][] maze
+            = {
+                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+                {1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1},
+                {1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1},
+                {1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1},
+                {1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1},
+                {1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1},
+                {1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1},
+                {1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1},
+                {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 9, 1},
+                {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+            };
     /**
      * @param args the command line arguments
      */
