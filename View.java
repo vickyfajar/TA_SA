@@ -69,6 +69,14 @@ private int[][] maze
             
     public static void main(String[] args) {
         // TODO code application logic here
+            SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                View view = new View();
+                view.setVisible(true);
+            }
+
+        });
     }
     
 }
