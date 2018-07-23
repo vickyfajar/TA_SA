@@ -32,6 +32,41 @@ private int[][] maze
         DepthFirst.searchPath(maze, 1, 1, path);
         System.out.println(path);
     }
+    
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+
+        g.translate(50, 50);
+
+        for (int row = 0; row < maze.length; row++) {
+            for (int col = 0; col < maze[0].length; col++) {
+                Color color;
+                switch (maze[row][col]) {
+                    case 1:
+                        color = Color.BLACK;
+                        break;
+                    case 9:
+                        color = Color.RED;
+                        break;
+                    default:
+                        color = Color.WHITE;
+                }
+                g.setColor(color);
+                g.fillRect(30 * col, 30 * row, 30, 30);
+                g.setColor(Color.BLACK);
+                g.drawRect(30 * col, 30 * row, 30, 30);
+            }
+        }
+        for (int p = 0; p < path.size(); p += 2) {
+            int pathX = path.get(p);
+            int pathY = path.get(p + 1);
+            g.setColor(Color.GREEN);
+            g.fillRect(pathX * 30, pathY * 30, 30, 30);
+
+        }
+    }
+            
     public static void main(String[] args) {
         // TODO code application logic here
     }
