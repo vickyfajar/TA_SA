@@ -23,9 +23,15 @@ private int[][] maze
                 {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 9, 1},
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
             };
-    /**
-     * @param args the command line arguments
-     */
+    private final List<Integer> path = new ArrayList<Integer>();
+    public View() {
+        setTitle("Simple Maze Solver");
+        setSize(640, 480);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        DepthFirst.searchPath(maze, 1, 1, path);
+        System.out.println(path);
+    }
     public static void main(String[] args) {
         // TODO code application logic here
     }
